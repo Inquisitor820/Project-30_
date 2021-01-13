@@ -29,45 +29,45 @@ function preload()
 
 function setup() 
 {
-	createCanvas(1450, 900);
+	createCanvas(1500, 750);
 	engine = Engine.create();
 	world = engine.world;
    
-    ground = new Ground(800,890,1600,15);
+    ground = new Ground(800,740,1600,15);
 
-    stand = new Ground(800,700,560,15);
+    stand = new Ground(800,690,560,15);
     stand2 = new Ground(1300,350,240,15);
 
 //Pyramid_Number_1
-    block1 = new Block(560,650,80,80);
-    block2 = new Block(640,650,80,80);
-    block3 = new Block(720,650,80,80);
-    block4 = new Block(800,650,80,80);
-    block5 = new Block(880,650,80,80);
-    block6 = new Block(960,650,80,80);
-    block7 = new Block(1040,650,80,80);
+    block1 = new Block(560,640,80,80);
+    block2 = new Block(640,640,80,80);
+    block3 = new Block(720,640,80,80);
+    block4 = new Block(800,640,80,80);
+    block5 = new Block(880,640,80,80);
+    block6 = new Block(960,640,80,80);
+    block7 = new Block(1040,640,80,80);
 
-    block8 = new Block(595,570,80,80);
-    block9 = new Block(675,570,80,80);
-    block10 = new Block(755,570,80,80);
-    block11 = new Block(835,570,80,80);
-    block12 = new Block(915,570,80,80);
-    block13 = new Block(995,570,80,80);
+    block8 = new Block(595,560,80,80);
+    block9 = new Block(675,560,80,80);
+    block10 = new Block(755,560,80,80);
+    block11 = new Block(835,560,80,80);
+    block12 = new Block(915,560,80,80);
+    block13 = new Block(995,560,80,80);
 
-    block14 = new Block(635,490,80,80);
-    block15 = new Block(715,490,80,80);
-    block16 = new Block(795,490,80,80);
-    block17 = new Block(875,490,80,80);
-    block18 = new Block(955,490,80,80);
+    block14 = new Block(635,480,80,80);
+    block15 = new Block(715,480,80,80);
+    block16 = new Block(795,480,80,80);
+    block17 = new Block(875,480,80,80);
+    block18 = new Block(955,480,80,80);
 
-    block19 = new Block(675,410,80,80);
-    block20 = new Block(755,410,80,80);
-    block21 = new Block(835,410,80,80);
-    block22 = new Block(915,410,80,80);
+    block19 = new Block(675,400,80,80);
+    block20 = new Block(755,400,80,80);
+    block21 = new Block(835,400,80,80);
+    block22 = new Block(915,400,80,80);
 
-    block23 = new Block(715,330,80,80);
-    block24 = new Block(795,330,80,80);
-    block25 = new Block(875,330,80,80);
+    block23 = new Block(715,320,80,80);
+    block24 = new Block(795,320,80,80);
+    block25 = new Block(875,320,80,80);
 
 //Pyramid_Number_2
     block_1 = new Block2(1210,315,60,60);
@@ -151,6 +151,14 @@ function draw()
   //Location
   console.log("X:",mouseX);
   console.log("Y:",mouseY);
+
+  fill("white");
+  stroke("black");
+  strokeWeight(6)
+  textFont("courier")
+  textSize(25);
+  text("X:" + mouseX,80,45);
+  text("Y:" + mouseY,80,75);
   
 }
 
@@ -169,3 +177,4 @@ function keyPressed()
     slingshot.attach(Hexagon.body);  
   }
 }
+
